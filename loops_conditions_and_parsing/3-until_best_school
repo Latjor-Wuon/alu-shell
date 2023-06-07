@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
-# a script that displays best school 10 times using while 
-x=0
-while [ "$x" -lt 10 ];do
-	    echo "Best School"
-	        ((x++))
-	done
+# print a string 10 times using until loop
+
+i=0
+
+until false; do
+  echo "Best School"
+  ((i++))
+  if [[ $i -lt 10 ]]; then
+    continue
+  else
+    break
+  fi
+done
